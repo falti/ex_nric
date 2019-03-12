@@ -50,6 +50,3 @@ blocks:
         - name: Formatting
           commands:
             - mix format --check-formatted
-        - name: Dialyzer
-          commands:
-            - mix dialyzer --halt-exit-status
