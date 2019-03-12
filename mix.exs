@@ -29,7 +29,7 @@ defmodule ExNric.MixProject do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README.md", "LICENSE.md"],
+      files: ["lib", "mix.exs", "README.md", "LICENSE"],
       maintainers: ["Frank Falkenberg"],
       licenses: ["MIT"],
       links: %{GitHub: "https://github.com/falti/ex_nric"}
