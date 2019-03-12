@@ -1,6 +1,6 @@
 # ExNric
 
-**TODO: Add description**
+Validation for Singapore National Registration Identity Card numbers (NRIC)
 
 ## Installation
 

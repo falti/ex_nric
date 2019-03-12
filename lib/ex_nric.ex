@@ -27,7 +27,7 @@ defmodule ExNric do
       {:error, "not an NRIC"}
 
   """
-  @spec validate(String.t()) :: {:atom, String.t()}
+  @spec validate(String.t()) :: {atom(), String.t()}
   def validate(nric) when is_binary(nric) do
     nric_pattern = ~r/^([STFG])(\d{7})([A-Z])$/
 
