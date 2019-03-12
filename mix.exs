@@ -13,6 +13,10 @@ defmodule ExNric.MixProject do
       deps: deps(),
       dialyzer: [
         flags: ~w(-Wunmatched_returns -Werror_handling -Wrace_conditions -Wno_opaque -Wunderspecs)
+      ],
+      preferred_cli_env: [
+        docs: :docs,
+        "hex.publish": :docs
       ]
     ]
   end
@@ -26,7 +30,7 @@ defmodule ExNric.MixProject do
   defp deps do
     [
       {:dialyxir, "~> 0.5.1", only: :dev},
-      {:ex_doc, "~> 0.13", only: [:docs]}
+      {:ex_doc, "~> 0.18.0", only: [:docs]}
     ]
   end
 
