@@ -24,7 +24,10 @@ defmodule ExNric.MixProject do
   end
 
   defp deps do
-    [{:dialyxir, "~> 0.5.1", only: :dev}]
+    [
+      {:dialyxir, "~> 0.5.1", only: :dev},
+      {:ex_doc, "~> 0.13", only: [:docs]}
+    ]
   end
 
   defp package do
