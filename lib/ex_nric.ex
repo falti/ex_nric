@@ -21,13 +21,14 @@ defmodule ExNric do
       {:ok, "G0047750N"}
 
       iex> ExNric.validate("G0047750U")
-      {:error, "checksum failed"}
+      {:error, :checksum_error}
 
       iex> ExNric.validate("X")
-      {:error, "not an NRIC"}
+      {:error, :invalid_format}
 
   """
-  @spec validate(String.t()) :: {atom(), String.t()}
+  @spec validate(String.t()) ::
+          {:ok, String.t()} | {:error, :checksum_error} | {:error, :invalid_format}
   def validate(nric) when is_binary(nric) do
     nric_pattern = ~r/^([STFG])(\d{7})([A-Z])$/
 
@@ -37,7 +38,7 @@ defmodule ExNric do
         do_check(calculated_checksum, checksum, nric)
 
       _ ->
-        {:error, "not an NRIC"}
+        {:error, :invalid_format}
     end
   end
 
@@ -45,7 +46,7 @@ defmodule ExNric do
     if calculated_checksum == checksum do
       {:ok, nric}
     else
-      {:error, "checksum failed"}
+      {:error, :checksum_error}
     end
   end
 
