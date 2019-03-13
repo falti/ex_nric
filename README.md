@@ -29,6 +29,7 @@ import ExNric
 
 {:error, :invalid_format} = validate("x")
 {:error, :invalid_format} = validate("x")
+{:error, :checksum_error} = validate("G0047750U")
 
 ```
 
