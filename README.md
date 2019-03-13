@@ -1,5 +1,11 @@
 # ExNric
 
+[![Hex.pm Version](http://img.shields.io/hexpm/v/ex_nric.svg?style=flat)](https://hex.pm/packages/ex_nric)
+
+  * [Documentation](https://hexdocs.pm/ex_nric)
+  
+## About
+
 Validation for Singapore National Registration Identity Card numbers (NRIC)
 
 ## Installation
